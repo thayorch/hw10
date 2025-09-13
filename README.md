@@ -1,7 +1,32 @@
-# Deliverables (Homework 10)
+# (Homework 10)
+#### Pre requirements
+- Python ≥ 3.9
+- Free key (pick ONE): Groq or Gemini (or your provider)
+#### Install & env
+
+```bash
+pip install litellm python-dotenv
+```
+
+- Create .env:
+```python
+GROQ_API_KEY=your_key_here
+MODEL=groq/llama-3.3-70b-versatile   # pick any supported chat model
+```
+
+- config.py:
+```python
+import os
+from dotenv import load_dotenv
+load_dotenv()
+MODEL = os.getenv("MODEL")
+assert MODEL, "Set MODEL in .env (e.g., groq/llama-3.3-70b-versatile)"
+```
+
+#### Deliverables
 - Create a **GitHub repo `hw10`** with your solutions for Tasks **1** and **3** (code + brief README)
 
-- Include your **`tc_complete_currency.py`** stub solution and test cases (screenshots ok)
+- Include your **json_mode_schema.py** & **`tc_complete_currency.py`** stub solution and test cases (screenshots ok)
 
 - Export your lab sheet results as **HTML** using GitHub-style formatting and include it in the repo
 
