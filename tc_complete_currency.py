@@ -165,3 +165,4 @@ if __name__ == "__main__":
     # After you implement convert() + its schema, these should work nicely:
     ex.run("Convert 100 USD to THB")
     ex.run("Convert 250 baht to euros")
+
